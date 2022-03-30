@@ -1,0 +1,32 @@
+
+
+<div class="container">
+    <div class="col-6">
+        <div class="card text-center">
+            <div class="card-header">
+              Hello
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{user.name}}</h5>
+              <p class="card-text">age: {{calAge(user.birthDate)}}</p>
+              <a href="#" class="btn btn-primary">Start</a>
+            </div>
+            <div class="card-footer text-muted">
+                <p>email: {{user.email}}</p>
+            </div>
+          </div>
+    </div>
+</div>
+
+<hr>
+
+<p> function result: {{ getSomeString()}} </p>
+
+<button (click)="handlebool()">click to change isSpaciel</button>
+<p [style.color]="isSpaciel ? 'red' : 'blue'">Font color depends on is spaciel</p>
+<p [style.font-size]="isSpaciel ? '4px' : '100px'">font size depends on isspaciel</p>
+<p [ngStyle]="currentStyles">curretn styles depends on cansave and isspaciel</p>
+
+<p [class.Spaciel]="isSpaciel">class based</p>
+
+<p [ngClass]="myClass">Amazing, but not WOW!</p>

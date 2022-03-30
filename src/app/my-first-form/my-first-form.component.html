@@ -1,0 +1,25 @@
+<p>my-first-form works!</p>
+
+<h1>candys</h1>
+
+<form #myForm="ngForm"  (submit)="handleSubmit(myForm.value)">
+    <label>
+        <input type="text" ngModel name="candyName" placeholder="candy name ">
+    </label>
+    <br>
+    <label>
+        <input type="range" ngModel name="sweetness" min="1" max="10" placeholder="sweetness lvl">
+    </label>
+    <br>
+    <label>
+        <input type="text" ngModel name="damage" placeholder="how harmfull">
+    </label>
+    <br>
+    <label>
+        <button class="btn btn-primary">submit</button>
+    </label>
+</form>
+
+<ol>
+    <li *ngFor="let c of candy">{{c.candyName}}</li>
+</ol>
